@@ -5,3 +5,8 @@ operations.
 Original Grapevine application:
 
 	http://grapevinelarp.com/
+
+Progress:
+
+	We can read the header of the file.  We can't really read much else.
+	The base struct is the GameData struct up to the menu file path.
