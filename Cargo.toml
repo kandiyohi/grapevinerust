@@ -1,0 +1,7 @@
+[package]
+name = "grapevinerust"
+version = "0.1.0"
+authors = ["Dioxylin"]
+
+[dependencies]
+byteorder = "1"
