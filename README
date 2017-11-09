@@ -1,0 +1,7 @@
+This is a port of Grapevine (written originally in VB6) to Rust.  It is
+intended to be a library to access the binary database format and provide
+operations.
+
+Original Grapevine application:
+
+	http://grapevinelarp.com/
