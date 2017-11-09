@@ -11,7 +11,7 @@ mod test {
 
     #[test]
     fn test_read() {
-        println!("Testing binary for grapevinerust.");
+        println!("Testing binary input for grapevinerust.");
         let path = "databases/testvine.gv3";
         print!("Opening path {}...", path);
         let path = Path::new(path);
@@ -63,6 +63,8 @@ mod test {
             assert!(data.link_trait_maxes == true);
             println!("Random trats string is \"{}\"", data.random_traits);
             assert!(data.random_traits == "7,5,3,5,5,5,5");
+            println!("Menu file path is \"{}\"", data.menu_file_name);
+            assert!(data.menu_file_name == "Grapevine Menus.gvm");
             println!("Initial header and chronicle information passes.");
         }
     }
