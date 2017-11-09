@@ -10,3 +10,10 @@ Progress:
 
 	We can read the header of the file.  We can't really read much else.
 	The base struct is the GameData struct up to the menu file path.
+
+Some directions to go:
+
+	We could look into providing just an API for anything you'd want to
+	change in the database as is with the current UI.  After that, we could
+	look into other file formats (xml, json), but keep compatibility (by
+	way of conversions) with the database.
