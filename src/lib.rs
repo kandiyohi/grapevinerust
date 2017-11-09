@@ -89,6 +89,7 @@ mod test {
 
 pub mod binary {
     use std::fs::File;
+    //use std::path::Path;
     //use std::io::prelude::*;
     //use std::io::Read;
     //use std::io;
@@ -119,6 +120,7 @@ pub mod binary {
         pub st_comment_end: String,
         pub link_trait_maxes: bool,
         pub random_traits: String,
+        pub menu_file_name: String,
     }
 
     impl GameData {
@@ -153,6 +155,22 @@ pub mod binary {
                     random_traits = file.read_string()?;
                 }
             }
+            let mut menu_file_name = file.read_string()?;
+            if menu_file_name == "" {
+                use std;
+                let path = std::env::current_exe()?;
+                //path.pop();
+                //path.push("Grapevine Menus.gvm");
+                menu_file_name = String::from(path.to_str().unwrap());
+            }
+            // if load_menu {
+            //  menu_set.open_menus(menu_file_name, false);
+            // }
+            //
+            // file.read_calendar()?;
+            if version >= 2.397 {
+                // Experience points?
+            }
             Ok(GameData {
                 header,
                 version,
@@ -171,6 +189,7 @@ pub mod binary {
                 st_comment_end,
                 link_trait_maxes,
                 random_traits,
+                menu_file_name,
             })
         }
     }
